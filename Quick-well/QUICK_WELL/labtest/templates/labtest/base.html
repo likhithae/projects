@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load staticfiles %}
+
+    <title>{% block title %}Quick Well Appointment{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'docapp/style.css' %}"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+    <style>
+    {% block style %}{% endblock %}
+    </style>
+</head>
+
+<body style="background-color: rgba(225,225,225,0.1)">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="website">
+                    <a class="navbar-brand" href="{% url 'home:home' %}" style="font-family: 'Satisfy'; font-size:25px">Quickwell</a>
+                </div>
+            </div>
+
+
+            <form class="navbar-form navbar-left" action="{% url 'labtest:index' %}" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="q" size="15px">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Location" name="q1" id="q1" size="10px">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="material-icons" style="font-size:15px">my_location</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'docapp:index' %}"><span class="fa fa-ambulance" aria-hidden="true" ></span>&nbspBook an Appointment</a></li>
+                    <li><a href="{% url 'med:index' %}"><span class="fa fa-medkit" aria-hidden="true"></span>&nbspOrder Medicines</a></li>
+                    <li><a href="{% url 'chat:index' %}">Chat with a doctor</a></li>
+                    <li><a href="#video call">Video Call</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'labtest:index' %}">Book lab tests</a></li>
+                            <li><a href="http://127.0.0.1:8000/forum/">Forum</a></li>
+                            <li><a href="{% url 'funding:index' %}">Funding</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    {% block body %}
+    {% endblock %}
+
+
+<footer class="text-center">
+    <div class="center copyright">Copyright © 2018, Practo. All rights reserved.</div>
+    <div class="center copyright">Call: +91 9513733001 | Email: support@practo.com</div>
+    <div class="center copyright">Practo Technologies Pvt. Ltd., RPS Green, 165/5, Krishna Raju Layout, JP Nagar 4th Phase, Bengaluru, Karnataka - 560076</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+{% extends 'chat/base.html' %}
+{% block title %}Details form{% endblock %}
+
+
+
+
+{% block body  %}
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+    MyBanners=new Array('http://tlgadvertising.com/wp-content/uploads/bfi_thumb/Babies-OD-n3wfk7wtv5vmokisytiimyqe1f9zmptu6pdisg4rx4-n630sa9dvtoe2upqfxoa211hkalwvdu12zi3p8nxp4.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZhFTvWZgSY-fzCSWBsvKTqQ--jOQ7Si56H7wVW-nNi5zlRyt8')
+    MyBannerLinks=new Array('http://tlgadvertising.com/portfolio/chi-st-lukes-health-sugar-land/','beaconhospital.ie')
+    banner=0
+    function ShowLinks(){
+    document.location.href="http://www."+MyBannerLinks[banner]
+    }function ShowBanners()
+    { if (document.images)
+    { banner++
+    if (banner==MyBanners.length) {
+    banner=0}
+    document.ChangeBanner.src=MyBanners[banner]
+    setTimeout("ShowBanners()",5000)
+    }
+    }
+    </script>
+<br><br><br><br>
+
+     <center>
+    <a href="javascript: ShowLinks()">
+    <img src="http://tlgadvertising.com/wp-content/uploads/bfi_thumb/Babies-OD-n3wfk7wtv5vmokisytiimyqe1f9zmptu6pdisg4rx4-n630sa9dvtoe2upqfxoa211hkalwvdu12zi3p8nxp4.jpg" width="900" height="120" name="ChangeBanner"/></a>
+    </center>
+
+      <div class="container">
+          <h2>
+            Chat with our Doctors
+          </h2>
+          <ul class="collection with-header">
+
+            <li class="collection-header">
+              <h4>Departments</h4>
+            </li>
+
+          <li class="collection-item avatar">
+            <a href="" class=""><i class="material-icons  circle blue">person</i></a>
+            <span class="title">ENT</span><br>
+            <a href=" http://127.0.0.1:8000/chat/ENT/">click here</a>
+          </li>
+            <li class="collection-item avatar">
+              <a href="" class=""><i class="material-icons  circle blue">person</i></a>
+                <span class="title">Pathology</span><br>
+                <a href=" http://127.0.0.1:8000/chat/Pathology/">click here</a>
+            </li>
+            <li class="collection-item avatar">
+              <a href="" class=""><i class="material-icons  circle blue">person</i></a>
+              <span class="title">Cardiology</span><br>
+              <a href=" http://127.0.0.1:8000/chat/Cardiology/">click here</a>
+            </li>
+            <li class="collection-item avatar">
+              <a href="" class="">
+                <i class="material-icons circle blue">person</i>
+              </a>
+              <span class="title">Dental</span><br>
+              <a href=" http://127.0.0.1:8000/chat/Dental/">click here</a>
+            </li>
+            <li class="collection-item avatar">
+              <a href="" class="">
+                <i class="material-icons circle blue">person</i>
+              </a>
+              <span class="title">Psychiatry</span><br>
+              <a href=" http://127.0.0.1:8000/chat/Psychiatry/">click here</a>
+            </li>
+            <li class="collection-item avatar">
+              <a href="" class="">
+                <i class="material-icons circle blue">person</i>
+              </a>
+              <span class="title">Neurology</span><br>
+              <a href=" http://127.0.0.1:8000/chat/Neurology/">click here</a>
+            </li>
+          </ul>
+      </div>
+{% endblock %}

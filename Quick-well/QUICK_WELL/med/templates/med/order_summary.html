@@ -1,0 +1,68 @@
+{% extends 'med/base.html' %}
+
+{% block body %}
+<div class="container">
+<br>
+    <p style="color:#1D466A; font-size: 25px">User name : {{ order.user.username }}</p>
+    <p style="color:#1D466A; font-size: 25px; font-weight: bold; letter-spacing: 1px">Your orders are:</p>
+    <br><br>
+<section>
+   <div class="row" style="padding-left: 50px;padding-right: 50px">
+    <table class="table table-hover table-bordered text-center" >
+      <tr class="text-center" style="background-color: #DEECF8;">
+        <th class="text-center">no.</th>
+        <th class="text-center">Medicine</th>
+        <th class="text-center">Price</th>
+          <th class="text-center">Quantity</th>
+          <th class="text-center">Prescription Required</th>
+         </tr>
+      {% for item in order.get_cart_items %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>
+            {{ item.medicine.name }}
+            <span class="pull-right">
+              <a href="{% url 'med:delete_item' item.id %}" data-balloon="remove this item from cart" class="text-danger" >
+                <i class="fa fa-trash"></i>
+
+              </a>
+            </span>
+          </td>
+          <td>{{ item.medicine.price }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.medicine.pres_req }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan= 5> You have not added any items yet.</td>
+        </tr>
+      {% endfor %}
+     <tr>
+        {% if order.get_cart_total != None %}
+        <td colspan=2>
+          <strong class="pull-right">Order Total:</strong>
+        </td>
+
+        <td colspan= 3>
+          <strong>Rs {{ order.get_cart_total }}</strong>
+        </td>
+        {% endif %}
+      </tr>
+    <tr>
+        <td colspan=1 >
+          <a href="{% url 'med:index' %}" class="btn btn-warning pull-left btn-success active">
+            {% if order %}Continue Shopping{% else %}Add Items to Cart {% endif %}
+          </a>
+        </td>
+        <td colspan=4>
+          {% if order.get_cart_items %}
+            <a href="{% url 'med:finalPrice' order.id %}" class="pull-right btn btn-primary btn-success active">Proceed To Checkout</a>
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+   </div>
+ </section>
+</div>
+    <br>
+{% endblock %}

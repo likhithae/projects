@@ -1,0 +1,85 @@
+{% extends 'med/base.html' %}
+
+
+{% block body %}
+{#    <div style="background-color: #CDE7FF;">#}
+        <div style="background-color: #EBF3FA;">
+    <div class="container text-center" style="padding-top: 100px; padding-bottom: 50px">
+
+        <div ><h3 style="margin: 10px 0 30px 0;
+      letter-spacing: 5px;
+      font-size: 20px;
+      color: #23527c; ">Medical Services You Can Trust 100%</h3></div>
+        <img src="https://img.freepik.com/free-vector/medicine-flat-design_1212-670.jpg?size=338&ext=jpg" class="img-circle" style="height: 200px; width:200px; ">
+        <div style="padding-top: 10px" ><h3 style="margin: 10px 0 30px 0;
+      letter-spacing: 5px;
+      font-size: 40px;
+      color: #23527c;"><span style="font-family: Satisfy; color: #23527c; font-size: 60px">Quickwell</span> <span style="font-size: 45px; color: #23527c; letter-spacing: 2px;">Pharmacy</span></h3></div>
+    </div>
+
+        <div style="background-color: white;" class="container"><h3 style="margin: 10px 0 30px 0; padding-top: 15px;
+      letter-spacing: 2px;
+      font-size: 40px;"><span style="color: #1D466A; font-size: 45px; font-weight: bold">Get every medicine on time</span></h3>
+{#            <div id="band" class="container text-left">#}
+{#                UFLSF;ISBF;O;OSIF#}
+{#            </div>#}
+            <p style="font-size: 18px; color:#1D466A; letter-spacing: 0px"><em>When you purchase medicines on QuickWell, you can be assured that you will get the medicines you order. Quickwell has the widest range of medicines online, sourced from our trusted network of pharmacies and medical stores. So, when you buy medicines online on Quickwell, our trained pharmacists, partner pharmacies and medical stores, ensure that your medicines are delivered to you on time, anywhere in India.</em></p>
+{#        <img src="https://www.practostatic.com/web-assets/home/assets/images/order.c84fc07b0be8a7e8d4db432eb4e606a2.svg" style="opacity: 0.9" align="right" height="300px"; width="300px;">#}
+            <br>
+            <p style="color:#1D466A; font-size: 25px"><i style="color: #2aabd2" class="fa fa-check"></i>&nbsp; &nbsp; Guaranteed availability</p>
+            <p style="color:#1D466A; font-size: 25px"><i style="color: #2aabd2" class="fa fa-check"></i>&nbsp; &nbsp; Over 130+ genuine medicines</p>
+            <p style="color:#1D466A;font-size: 25px"><i style="color: #2aabd2" class="fa fa-check"></i> &nbsp;&nbsp; Leading Healthcare Providers</p>
+        <p style="color:#1D466A; font-size: 25px"><i style="color: #2aabd2" class="fa fa-check"></i>&nbsp; &nbsp; Quick home delivery</p>
+{#        <div style="text-align: center ;padding-top: 20px"><h3 style="margin: 10px 0 30px 0; padding-top: 15px;#}
+{#      letter-spacing: 2px;#}
+{#    font-size: 40px;"><span style="color: #1D466A; font-size: 45px; font-weight: bold; ">Begin Shopping</span></h3>#}
+{#        </div>#}
+        </div>
+        <div class="container" style="background-color: white; padding-top: 0px">
+        {% for medicine in all_medicines %}
+                <div class="col-sm-4 col-xs-12 " style="padding:30px;">
+                  <div class="panel panel-default text-center" style=" padding-left:3px; padding-right:3px; ">
+{#                    <div class="panel-heading">#}
+{#                      <h2>{{ medicine.name }}</h2>#}
+{#                    </div>#}
+                    <div class="panel-body">
+                    <div class="conti" data-aos="zoom-in-up">
+                            <img src="{{ medicine.description.url }}" width="150px" height="150px" class="image adjust" >
+                            <div class="overlay">
+                                <div class="texting">
+
+                            <p>Pharmacy - {{ medicine.pharmacy }}</p><br>
+                            <p >Prescription :{% if medicine.pres_req == "yes" %}
+                                Required
+                                {% else%}
+                                Not Required
+                            {% endif %}</p><br>
+                                <form action="{{ medicine.about }}" target="_blank">
+                                    <button type="submit" target="_blank"  class="btn1"><span style="color: black">Details</span></button></h5>
+                                </form>
+                                </div>
+                            </div>
+                    </div>
+                    <h2 style="letter-spacing: 0; font-size: 25px ; color: #060E2F; padding-bottom: 0px" id="med_name">{{ medicine.name }}</h2>
+                    <p><span style="letter-spacing: 0; font-size: 20px ; color: #060E2F; padding-bottom: 0px">Price  -  Rs {{ medicine.price }}</span> </p>
+
+                    </div>
+                    <div class="panel-footer" style="background-color: white">
+                            <form action="{% url 'med:add_to_cart' medicine.id %}" style="padding-top: 10px">
+                            <input type="number" name ="quantity" value="" required placeholder="Quantity" min="0" style="width: 100px; text-align: center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!--<span class="glyphicon glyphicon-shopping-cart">--><button type="submit" onclick="myFunction()" >Add to Cart</button><!-- </span>-->
+                            </form>
+
+                    </div>
+                  </div>
+                </div>
+            {% empty %}
+            <h3>Nothing found with name "{{ request.GET.q }}"</h3>
+        {% endfor %}
+        </div>
+        <div style="padding-bottom: 100px; background-color: #EBF3FA;"></div>
+    </div>
+
+{% endblock %}
+
+

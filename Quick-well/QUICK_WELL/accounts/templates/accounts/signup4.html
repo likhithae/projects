@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Doctors Signup</title>
+    <style>
+        body  {
+            background-image: url("https://image.freepik.com/free-photo/doctor-s-stethoscope-with-blue-background_23-2147652363.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .transbox {
+            margin: 50px;
+            background-color: #F0EAD6;
+            /*border: 1px solid black;*/
+            opacity: 0.8;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #F0EAD6;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 2px;
+            width: 10px;
+        }
+        .navbar{
+			background-color: #2B669A;
+			opacity: 0.8;
+			text-color: black;
+		}
+		.navbar li a, .navbar .navbar-brand {
+			color: #d5d5d5 !important;
+		}
+		.navbar-nav li a:hover {
+			color: #fff !important;
+		}
+		.navbar-nav li.active a {
+			color: #fff !important;
+			background-color: #29292c !important;
+		}
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+		}
+		.open .dropdown-toggle {
+			color: #fff;
+			background-color: #555 !important;
+		}
+		.dropdown-menu li a {
+			color: #000 !important;
+		}
+		.dropdown-menu li a:hover {
+			background-color: blue !important;
+		}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="website">
+                    <a class="navbar-brand" href="{% url 'home:home' %}" style="font-family: 'Satisfy'; font-size:25px">Quickwell</a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>{% if temp == 1 %}<a href="{% url 'accounts:login' %}"><span class="fa fa-ambulance" aria-hidden="true" ></span>&nbspBook an Appointment</a>{% else %}<a href="{% url 'accounts:login' %}"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span>&nbsp Back</a>{% endif %}</li>
+                    <li><a href="{% url 'med:index' %}"><span class="fa fa-medkit" aria-hidden="true"></span>&nbspOrder Medicines</a></li>
+                    <li><a href="{% url 'chat:index' %}">Chat with a doctor</a></li>
+                    <li><a href="http://127.0.0.1:8000/video_conference/">Video Call</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://127.0.0.1:8000/lab/index/">Book lab tests</a></li>
+                            <li><a href="http://127.0.0.1:8000/forum/">Forum</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br>
+    <center>
+        <div>
+            <h1 style="color: white" class="well-lg">
+            <!--<img src="https://openclipart.org/download/285045/publicdomainq-medicine-doctor-man.svg" style="height: 60px ">-->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register here if you are a doctor
+            </h1>
+        </div>
+    </center>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="transbox">
+        <table class="table table-hover table-responsive" style="background-color: #F0EAD6">
+            {% for field in user_form %}
+            <tr>
+                <td>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ field.label_tag }}
+                </td>
+                <td>
+                    <center>{{ field }}</center>
+                </td>
+            </tr>
+            {% endfor %}
+
+            {% for field in profile_form %}
+            <tr>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ field.label_tag }}
+                </td>
+                <td>
+                    <center>{{ field }}</center>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    <div style="background-color: #F0EAD6">
+        <center><button style="color: blue" type="submit">SignUp</button></center><br>
+    </div>
+    </div>
+</form>
+</body>
+</html>
+
+                <!--       {{ user_form }}
+                    {{ profile_form }}
+                <input type="submit" value="Signup"> </center>-->
+<!--{#<!DOCTYPE html>#}-->
+<!--{#<html lang="en">#}-->
+<!--{#<head>#}-->
+<!--{#    <meta charset="UTF-8">#}-->
+<!--{#    <title>Doctors Signup</title>#}-->
+<!--{#    <style>#}-->
+<!--{#        body  {#}-->
+<!--{#            background-image: url("http://healthplansonline.com/images/health/stethoscope_background.jpg");#}-->
+<!--{#            background-repeat: no-repeat;#}-->
+<!--{#            background-size: cover;#}-->
+<!--{#            background-color: #2aabd2;#}-->
+<!--{#        }#}-->
+<!--{#        .transbox {#}-->
+<!--{#    margin: 30px;#}-->
+<!--{#    background-color: #ffffff;#}-->
+<!--{#    border: 1px solid black;#}-->
+<!--{#    opacity: 0.8;#}-->
+<!--{#}#}-->
+<!--{##}-->
+<!--{#</style>#}-->
+<!--{#</head>#}-->
+<!--{#<body>#}-->
+<!--{#    <form method="POST" enctype="multipart/form-data">#}-->
+<!--{#        {% csrf_token %}#}-->
+<!--{#    <div><center>    <h1>Register here if you are a doctor</h1></center>#}-->
+<!--{##}-->
+<!--{#    <div class="transbox">#}-->
+<!--{#   <center> <p>{% for field in user_form %}#}-->
+<!--{#    {{ field.label_tag }}<br>#}-->
+<!--{#    {{ field }}<br>#}-->
+<!--{#    {% endfor %}</p>#}-->
+<!--{#     <p>{% for field in profile_form %}#}-->
+<!--{#    {{ field.label_tag }}<br>#}-->
+<!--{#    {{ field }}<br>#}-->
+<!--{#    {% endfor %}</p>#}-->
+<!--{#        <button type="submit">SignUp</button>#}-->
+<!--{#    &lt;!&ndash;       {{ user_form }}#}-->
+<!--{#        {{ profile_form }}#}-->
+<!--{#    <input type="submit" value="Signup"> </center>&ndash;&gt;</center></div>#}-->
+<!--{#    </div>#}-->
+<!--{##}-->
+<!--{#</form>#}-->
+<!--{#</body>#}-->
+<!--{#</html>#}-->

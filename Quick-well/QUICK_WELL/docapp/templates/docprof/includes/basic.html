@@ -1,0 +1,18 @@
+{% extends 'profile/header.html' %}
+{% block content %}
+<pre><div style="background-color: skyblue; color: black">
+                                                                                Doctor Name : {{ doc.firstname}} {{ doc.lastname }}
+
+                                                                                Experience : {{ doc.experience }}
+
+                                                                                Specialization: {{ doc.specialization }}
+
+                                                                                address: {{ doc.address }}
+
+                                                                                Hospital: {{ doc.hospital }}
+
+                                                                                Fee: {{ doc.fee }}
+
+                                                                                Phone number: {{ doc.phone_num }}
+</div></pre>
+{% endblock %}

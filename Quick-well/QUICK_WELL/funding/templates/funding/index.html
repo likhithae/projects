@@ -1,0 +1,93 @@
+{% extends 'funding/base.html' %}
+
+{% block title %}{{ project.Title }}{% endblock %}
+{% block style %}
+    .panel-heading{
+    height: 200px;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+    .blockHead {
+    background-color: #4D81BF;
+    /*width: 150px; */
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    float:left
+    }
+
+    .blockHead:after {
+    color: #4D81BF;
+    border-left: 10px solid;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    right: -10px;
+    top:0
+    }
+
+    .blocktext{
+    color:white;
+    padding-left:5px;
+    vertical-align: middle;
+    }
+
+{% endblock %}
+
+{% block body %}
+
+    <br><br><br><br>
+    <div class="container-fluid">
+        <table class="table" style="font-size: medium">
+            <thead>
+                <tr>
+                    <th><a href="{% url 'funding:startproject' %}"  style="text-decoration:none;font-size: large" >Start A Fundraiser</a></th>
+                    <th><a href=""  style="text-decoration:none"><i class="fa fa-medkit" style="color:#2aabd2"></i>&nbsp;&nbsp;Medical</a></th>
+                    <th><a href=""  style="text-decoration:none"><i class="fas fa-ribbon" style="color:#2aabd2"></i>&nbsp;&nbsp;NGO</a></th>
+                    <th><a href=""  style="text-decoration:none"><i class="fa fa-hospital-o" style="color:#2aabd2"></i>&nbsp;&nbsp;Hospitals/Clinics</a></th>
+                </tr>
+            </thead>
+        </table>
+        </div>
+
+
+        <div class="row" style="
+        margin: 20px" >
+        {% for project in fundraiser %}
+            <div class="col-sm-3 col-xs-10" style="padding: 30px">
+                <div class="panel panel-default text-center" style="border-radius: 0px">
+
+                    <div class="panel-heading" style="background-image: url({{ project.photo.url }});">
+
+                    </div>
+
+                    <div class="panel-body" style="padding-left: 0px">
+                        <div class="blockHead" ><span class="blocktext">{{ project.category }}</span></div>
+                        <br>
+                        <p>{{ project.Title }}</p>
+                        <p>by {{ project.user_name.username }}</p>
+                        <p>Money Required : <i class="fa fa-rupee"></i> {{ project.goal_amount }}</p>
+                        <p><a href="{% url 'funding:fullstory' project.id %}">Read full story</a></p>
+
+                    </div>
+
+                    <div class="panel-footer" style="background-color:white;">
+                        <!--
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar"  style="width:40%">40%</div>
+                        </div>-->
+                        <button onclick="window.location='{% url 'funding:donate' project.id %}'" style="border-radius: 10px" class="btn btn-success active">Donate</button>
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'chat/base.html' %}
+{% block title %}Details form{% endblock %}
+
+{% block body %}
+
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #2b669a;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #2b669a;
+}
+
+
+
+
+#form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+
+<div class="card w-50" style =" margin:10%">
+  <div class="card-body" style ="background-color:#ebebeb" >
+    <div class="card-title">
+        <br>
+    <center><h2>Fill the following details to chat with our doctor</h2></center>
+    </div>
+  <div id="form">
+    <form action="{% url 'chat:consult' %}" method="POST">
+      {%   csrf_token %}
+
+      <label for="patientname">Patient Name</label>
+      <input type="text" id="patientname" name="patientname" placeholder="patient name.." required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email id" required>
+      <label for="symptoms">Tell us your symptoms</label>
+      <input type="text" id="symptoms" name="symptoms" placeholder="Please enter symptoms" required>
+
+      <label for="Department">Select department corresponding to your problem</label>
+      <select id="Department" name="Department" required>
+        <option value="ENT">ENT</option>
+        <option value="Dental">Dental</option>
+        <option value="cardiology">cardiology</option>
+        <option value="pathology">pathology</option>
+        <option value="neurology">neurology</option>
+        <option value="psychiatry">psychiatry</option>
+      </select>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  </div>
+</div>
+
+{% endblock %}
+
+

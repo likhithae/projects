@@ -1,0 +1,57 @@
+{% extends 'funding/base.html' %}
+
+{% block title %}Doctor Details{% endblock %}
+
+{% block body %}
+
+    <div class="container" style="padding-left: 10px;padding-right: 10px">
+        <br>
+        <div class="col-sm-8" style="width: 60%">
+        <div class="row" style="background-color: white; padding-left:20px; padding-right:20px; padding-top: 10px; padding-bottom: 10px">
+            <p style="font-size: 25px">{{ fundraiser.Title }}</p>
+            <p>by {{ fundraiser.user_name.username }}</p>
+        </div>
+        <br>
+
+
+        <div class="row" style="background-color: white; padding-left:20px; padding-right:20px; padding-top: 10px; padding-bottom: 10px">
+            <p style="font-size: 25px">Story</p>
+            <hr style="color: rgba(192,192,192,0.1);">
+            <p>{{ fundraiser.Fundraiser_story }}</p>
+        </div>
+        <br>
+
+        <div class="row" style="background-color: white; padding-left:20px; padding-right:20px; padding-top: 20px; padding-bottom: 20px">
+            <p>NEFT/IMPS/RTGS transfer to the following account:</p>
+            <p>(From Banks in India only)</p>
+            <br>
+            <p><b>Account Number : </b>{{ fundraiser.account_number }}</p>
+            <p><b>Account holder Name : </b>{{ fundraiser.accountholder_name }}</p>
+            <p><b>IFSC Code : </b>{{ fundraiser.ifsc_code }}</p>
+        </div>
+        </div>
+
+        <div class="col-sm-2" style="background-color: rgba(192,192,192,0.1);width: 10%">
+        </div>
+
+        <div class="col-sm-4" style="float:right" >
+
+            <div class="row">
+                <img src="{{ fundraiser.photo.url }}" height="250px" width="380"/>
+            </div>
+            <br>
+
+            <div class="row" style="background-color: white; padding-left:20px; padding-top: 20px; padding-bottom: 10px">
+                <p>Campaign Details</p>
+                <hr style="color: rgba(192,192,192,0.1);">
+                <p>About Campaigner</p>
+                <p><span class="glyphicon glyphicon-user" style="color:green; font-size:25px"></span>&nbsp;&nbsp;{{ fundraiser.user_name.username }}</p>
+                <p>About Beneficiary</p>
+                <p><span class="glyphicon glyphicon-user" style="color:green; font-size:25px"></span>&nbsp;&nbsp;{{ fundraiser.beneficiary_name }}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

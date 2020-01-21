@@ -1,0 +1,38 @@
+{% extends 'docapp/base.html' %}
+
+{% block title %}Doctor Details{% endblock %}
+
+{% block body %}
+
+    <h3>Confirm your appointment for Dr.{{ doctor.firstname }}{{ doctor.lastname }} </h3>
+
+    <div class="container">
+
+            <form action="">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <label for="name">Patient's Name:</label>
+                            <input type="text" class="form-control" id="fullname" placeholder="Enter Full name" name="fullname">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phno">Phone Number:</label>
+                            <input type="text" class="form-control" id="phno" placeholder="Enter phone number" name="phno">
+                        </div>
+                    </div>
+                </div>
+                <h4>Consultion Fees:&nbsp;<i class="fa fa-rupee"></i></h4>
+                <button type="submit" class="btn btn-primary">Confirm Appointment</button><br>
+                <h4>Do you want to change the appointment date.Then go back change the date</h4>
+                <button type="submit" onclick="history.go(-1); return false;" class="btn btn-info">Change date or time</button>
+            </form>
+
+    </div>
+
+{% endblock %}

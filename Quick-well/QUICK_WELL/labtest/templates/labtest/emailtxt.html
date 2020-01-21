@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment confirmed</title>
+</head>
+<body>
+    <p style="font-size: 16px">Dear {{ name }}, your appointment for {{ test.test_name }} test has been booked in the following slot:<br>
+    <ul style="font-size: 16px">for
+        <li>Date: {{ date }}</li>
+        <li>Time: {{ time }}</li>
+    </ul>
+    <p>These are the preparations to be made before the test:</p>
+    <p>{{ test.preparation }}</p>
+
+
+    <p>Thank you.</p>
+    <p>QuickWell</p>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!Doctype HTML>
+<html>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ patient_form.first_name }}
+            {{ patient_form.email }}
+            {{ patient_form.contact_number }}
+            {{ patient_form.address }}
+            <!--<span style="color: #f4c613">Age :</span>
+            {{patient_form.age}}<br><br>
+            <span style="color: #f4c613">Contact_number   :</span>
+            {{patient_form.contact_number}}<br><br>
+            <span style="color: #f4c613">City:</span>
+            {{patient_form.city}}<br><br>
+            <span style="color: #f4c613">Photo:</span>
+            {{patient_form.patient_photo}}<br><br>
+            <span style="color: #f4c613">District:</span>
+            {{patient_form.district}}<br><br>
+            <span style="color: #f4c613">State:</span>
+            {{patient_form.state}}<br><br>
+            <span style="color: #f4c613">Country:</span>
+            {{patient_form.country}}<br><br>
+            <span style="color: #f4c613">Zipcode:</span>
+            {{patient_form.zipcode}}<br><br>-->
+            <button class='btn-general btn-profile' class="reg" type="submit">Update It</button><br><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'funding/base.html' %}
+{% load define_action %}
+{% load crispy_forms_tags %}
+
+{% block title %}Funding{% endblock %}
+
+{% block style %}
+{% endblock %}
+{% block body %}
+
+   <div class="container">
+        <p style="color:#1D466A; font-size: 35px; font-weight: bold; text-align: center; letter-spacing: 2px">Donation Details</p>
+        <div class="row" style="background-color: white; padding-left:20px; padding-right:20px; padding-top: 20px; padding-bottom: 20px">
+            <p>NEFT/IMPS/RTGS transfer to the following account:</p>
+            <p>(From Banks in India only)</p>
+            <br>
+            <p><b>Account Number : </b>{{ fundraiser.account_number }}</p>
+            <p><b>Account holder Name : </b>{{ fundraiser.accountholder_name }}</p>
+            <p><b>IFSC Code : </b>{{ fundraiser.ifsc_code }}</p>
+        </div>
+        </div>
+
+   </div>
+
+{% endblock %}

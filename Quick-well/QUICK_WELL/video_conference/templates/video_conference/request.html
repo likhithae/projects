@@ -1,0 +1,17 @@
+
+{% extends 'video_conference/base.html' %}
+{% block title %}Video_conference request{% endblock %}
+
+{% block body %}
+<form method="POST" action="">
+  {%csrf_token%}
+  Email:<br>
+  {{form.email}}
+  <br>
+  User Name:<br>
+  {{form.username}}
+  <br><br>
+  <input type="submit" value="Request">
+</form>
+
+{% endblock %}

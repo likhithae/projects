@@ -1,0 +1,39 @@
+{% extends 'docapp/base.html' %}
+
+{% block title %}Doctor Details{% endblock %}
+
+{% block body %}
+
+    <div class="container"style="padding-top: 80px; padding-bottom: 100px; padding-left: 150px; padding-right: 150px; ">
+    <br>
+        <div class="row" style="background-color: white; padding-left:50px; padding-right:50px; padding-top: 40px; padding-bottom: 40px">
+        <center>
+            <p style="color:#1D466A; font-size: 25px;">Thank you {{ name }} for booking appointment</p>
+            <p style="color:#1D466A; font-size: 35px; font-weight: bold; text-align: center; letter-spacing: 2px">Appointment Details</p>
+            <hr style="border: 1px solid #afd9ee;  width: 150px; " size="5"><br>
+            <div style="font-size: 18px;color:#1D466A; ">
+                <p><b>Name : </b> {{ name }} </p>
+                <p><b>Test : </b> {{ test.test_name }}</p>
+                <p><b>Date : </b> {{ date }}</p>
+                <p><b>Time : </b> {{ time }} </p>
+                <p><b>cost : </b> {{ test.cost }}</p>
+                <p style="color:#1D466A; font-size: 20px; font-weight: bold;">Preparations:</p><p>{{ test.preparation }}</p>
+            </div>
+            <br>
+
+
+            <form action="{% url 'labtest:delete' appid %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Cancel Appointment</button>
+            </form>
+
+            {% if msg %}
+                <h3>msg</h3>
+            {% endif %}
+
+        </center>
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends 'profile/header.html' %}
+{% block content %}
+    <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div style="color: darkgreen">
+            <h6>FirstName  :</h6>
+            {{doc_form.firstname}}<br><br>
+            <h6>LastName   :</h6>
+            {{doc_form.lastname}}<br><br>
+            <h6>Experience:</h6>
+            {{doc_form.experience}}<br><br>
+            <h6>doc_photo:</h6>
+            {{doc_form.doc_photo}}<br><br>
+            <h6>Specialization:</h6>
+            {{doc_form.specialization}}<br><br>
+            <h6>Fee:</h6>
+            {{doc_form.fee}}<br><br>
+            <h6>Hospital Tied up with:</h6>
+            {{doc_form.hospital}}<br><br>
+            <h6>address:</h6>
+            {{doc_form.address}}<br><br>
+            <button class='btn-general btn-profile' class="reg" type="submit">Update</button><br><br>
+                    </div>
+    </form>
+
+				<!--</form>-->
+				<!--{% if request.user.student %}-->
+				<!--<button class='btn-general btn-profile'><a style="text-decoration: none;" href="{% url 'result:changepassword'%}">CHANGE PASSWORD</a></button>-->
+				<!--{% endif %}-->
+{% endblock %}

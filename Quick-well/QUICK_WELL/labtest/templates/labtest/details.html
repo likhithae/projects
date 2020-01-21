@@ -1,0 +1,25 @@
+{% extends 'docapp/base.html' %}
+
+{% block title %}Labtests Details{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <br><br>
+        {% for lab in lab %}
+            <img src="{{ lab.lab_photo.url }}" height="150" width="150"/>&nbsp;&nbsp;
+        {% endfor %}
+        <br>
+        <div style="font-size: 20px">
+            <br>
+            <p><b>Test Name :</b> {{ test.test_name }}</p>
+            <p><b>Test is available in the labs : </b></p>
+            {% for lab in lab %}
+                {{ lab.lab_name }}
+            {% endfor %}
+            <p><b>Cost : </b><i class="fa fa-rupee"></i> {{ test.cost }}</p>
+            <p><b>Description :</b> {{ test.procedure }}</p>
+            <p><b>Preparation : </b>{{ test.preparation }}</p>
+        </div>
+    </div>
+{% endblock %}
