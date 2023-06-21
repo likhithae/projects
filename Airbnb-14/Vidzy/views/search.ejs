@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<div class="container-fluid m-0" style="padding-top:70px;">
+    <%if (message ){%>
+        <div class="alert alert-warning search-msg" ><%=message%>
+        </div>
+    <%}%>
+    <%- include ('partials/search_bar')%>
+
+</div>
+  <div class="container mb-5 mt-5 property-list">
+    <div class="container mb-5 mt-5 property-list">
+        <%- include ('partials/list_properties')%>
+    </div>
+  </div>
+
+    <%- include('partials/footer') %>

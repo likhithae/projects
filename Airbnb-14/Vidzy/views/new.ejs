@@ -1,0 +1,161 @@
+<%- include('partials/header') %>
+
+    <div class="container mb-5 mt-5 p-5">
+        <!--<a href="/properties">Back to properties</a>-->
+        <br><br>
+        <form action="/properties" method="POST" enctype="multipart/form-data">
+            <div class="form-group col-md-5 p-2">
+                <label>Property Number<span style="color:red"> * </span></label>
+                <input type="number" id="num" name="num" value="" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Title <span style="color:red"> * </span></label>
+                <input type="text" id="title" name="title" value="" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Street <span style="color:red"> * </span></label>
+                <input type="text" id="street" name="street" value="" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>City <span style="color:red"> * </span></label>
+                <input type="text" id="city" name="city" value="" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>State <span style="color:red"> * </span></label>
+                <input type="text" id="state" name="state" value="" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Country <span style="color:red"> * </span></label>
+                <input type="text" id="country" name="country" value="" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Zip code <span style="color:red"> * </span></label>
+                <input type="text" id="zipcode" name="zipcode" value="" placeholder="12345" pattern="[0-9]{5}" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Capacity <span style="color:red"> * </span></label>
+                <input type="number" min="1" step="1" id="capacity" name="capacity" value="1" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Property type<span style="color:red"> * </span></label>
+                <input type="text" id="property_type" name="property_type" value="" class="form-control" required>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label>Price per night <span style="color:red"> * </span></label>
+                <input type="text" id="price" name="price" value="" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Cleaning Fee</label>
+                <input type="text" id="cleaning" name="cleaning" value="$0" class="form-control">
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Service Fee</label>
+                <input type="text" id="service" name="service" value="$0" class="form-control">
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Number of bedrooms <span style="color:red"> * </span></label>
+                <input type="number" id="bedrooms" name="bedrooms" value="0" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Number of beds</label>
+                <input type="number" id="beds" name="beds" value="0" class="form-control">
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label for="amenities">Amenities <span style="color:red"> * </span></label><br>
+                <select id="amenities" name="amenities" size="7" multiple required style="width:100%;border-color:lightgray;border-radius:4px;padding:4px;">
+                    <option value="Free wifi">Free wifi</option>
+                    <option value="Free parking on premises">Free parking on premises</option>
+                    <option value="Garden view">Garden view</option>
+                    <option value="Patio or balcony">Patio or balcony</option>
+                    <option value="TV">TV</option>
+                    <option value="Swimming Pool">Swimming Pool</option>
+                    <option value="Kitchen">Kitchen</option>
+                </select><br><br>
+                <p style="font-size:13px;">Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+            </div>
+            <!--
+            <div class="form-group col-md-5 p-2">
+                <label>Image name</label>
+                <input type="text" id="image" name="image" value="" class="form-control">
+            </div>-->
+            <div class="form-group col-md-5 p-2">
+                <label>Host name <span style="color:red"> * </span></label>
+                <input type="text" id="host" name="host" value="" class="form-control" required>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label>Short Description</label>
+                <textarea id="desc" name="desc" value="" class="form-control"></textarea>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Full Description</label>
+                <textarea id="fulldesc" name="fulldesc" value="" class="form-control"></textarea>
+            </div>
+             <div class="form-group col-md-5 p-2">
+                <label>House Rules</label>
+                <textarea id="house_rules" name="house_rules" value="" class="form-control"></textarea>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Cancellation policy</label>
+                <textarea id="cancellation_policy" name="cancellation_policy" value="" class="form-control"></textarea>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Display photo <span style="color:red"> * </span></label>
+                <input type="file" accept="image/png, image/jpg" id="image" name="image" class="form-control" required>
+            </div>
+            
+            <div class="form-group col-md-5 p-2">
+                <label>More photos</label>
+                <input type="file" accept="image/png, image/jpg" id="all_photos" name="all_photos" class="form-control" multiple>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label for="avail_from">Available from<span style="color:red"> * </span></label>
+                <input class="form-control" type="date" name="availability_from"
+                       id="avail_from" required onchange='check()' onkeyup="check()" ><br>
+                <label for="avail_to">Available until <span style="color:red"> * </span></label></label>
+                <input class="form-control" type="date" name="availability_to"
+                       id="avail_to" required onchange='check()' onkeyup="check()"><br>
+            </div>
+
+            <span id='message1' style="color:red">Dates are not valid please change the dates</span>
+                                <br>
+            <br>
+            <div class="form-group col-md-5 p-2">
+                <button type="submit" id="add" class="btn btn-primary btn-lg" disabled>Add Property</button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <script>
+
+        var date1 = document.getElementById("avail_from");
+        var date2 = document.getElementById("avail_to");
+    
+
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = yyyy + '-' + mm + '-' + dd;
+
+        var check = function () {
+
+            if(date1.value.valueOf() < today.valueOf() ||   date2.value.valueOf() < today.valueOf() || date1.value.valueOf() > date2.value.valueOf()){
+		        document.getElementById('message1').style.display = "block"
+	        }
+            else{
+                document.getElementById('message1').style.display = "none"
+                document.getElementById("add").disabled = false;
+            }
+        }
+    
+    
+      </script>
+
+
+    <%- include('partials/footer') %>

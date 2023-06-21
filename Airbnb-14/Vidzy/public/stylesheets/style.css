@@ -1,0 +1,573 @@
+/*
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}*/
+
+
+#carouselExampleCaptions img {
+  height: 650px;
+}
+
+.card-product-list, .card-product-grid {
+  margin-bottom: 0;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.10rem;
+  margin-top: 10px;
+
+}
+
+.card-product-grid:hover {
+  -webkit-box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+  box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+
+.card-product-grid .info-wrap {
+  overflow: hidden;
+  padding: 18px 20px;
+}
+
+[class*='card-product'] a.title {
+  color: #212529;
+  display: block;
+}
+
+
+.rating-stars {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  clear: both;
+}
+
+
+.rating-stars li.stars-active {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating-stars li {
+  display: block;
+  text-overflow: clip;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+card-product-grid .bottom-wrap {
+  padding: 18px;
+  border-top: 1px solid #e4e4e4;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #343a40;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.45rem 0.85rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+
+}
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #3167eb;
+  border-color: #3167eb;
+}
+
+.fa {
+  color: #FF5722;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer {
+  background-color: #555;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.ft-title {
+  color: #fff;
+  font-family: "Merriweather", serif;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+
+
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 29.8125rem
+) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 77.5rem
+) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+.ft-main-item form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#email {
+  border: 0;
+  padding: 0.625rem;
+  margin-top: 0.3125rem;
+}
+
+#submit {
+  background-color: #00d188;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 0.3125rem;
+}
+
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  border-top: 1px #777 solid;
+  padding-top: 1.25rem;
+}
+
+.ft-social-list li {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.ft-legal {
+  padding: 0.9375rem 1.875rem;
+  background-color: #333;
+}
+
+.ft-legal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+
+.ft-legal-list li:nth-last-child(2) {
+  flex: 1;
+}
+
+  
+.navbar img {
+  height: 1.6cm;
+  width: 4.6cm
+}
+
+header {
+  background-color: white;
+}
+
+.place-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-left: 6%;
+  margin-right: 6%;
+  box-shadow: rgba(0, 0, 0, .172549) 0 6px 12px 0;
+  cursor: pointer;
+}
+
+.search-msg{
+  margin-left: 25%;
+  margin-right: 25%;
+  align-items: center;
+  margin-top:10px;
+  text-align: center;
+}
+
+.search-element {
+  display: inline-block;
+  display: flex;
+  border-right: 1px solid rgba(10, 10, 10, .1);
+  padding: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.search-label {
+  font-weight: 700;
+}
+
+.search-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-top: 5px;
+}
+
+.search-input:focus {
+  box-shadow: 0px 2px 0px 0px tomato;
+}
+
+
+.search-button {
+  display: inline-block;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 2em;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 210;
+  border: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.jumbotroncustom {
+  margin: 0%;
+}
+
+.room-description {
+  font-size: 0.7em;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+      padding-top: 15px;
+  }
+
+  .sidenav a {
+      font-size: 18px;
+  }
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+.sidebar {
+  position: fixed;
+  overflow-x: hidden;
+  top: 150px;
+  z-index: 1;
+  left: 0;
+  margin: 0px;
+  height: 90%;
+  width: 1cm;
+  background: #020204;
+  padding: 6px 14px;
+  transition: all 0.4s ease;
+}
+
+.side.active {
+  width: 300px;
+}
+
+.sidebar .closebtn {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  text-decoration: none;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidebar ul {
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0px;
+  list-style: none;
+  line-height: 50px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: 12px;
+}
+
+.sidebar ul li a:hover {
+  color: #11101d;
+  background: #fff;
+}
+
+.sidebar ul li a {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.filterbutton {
+  background-color:lightblue;
+  border: none;
+  color: Black;
+  text-align: center;
+  font-size:1.3em;  
+  cursor:pointer; 
+  margin:10px ;
+  margin-left:15px;
+  border-radius:25px;
+  border-color: black;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .table {
+      overflow-x: auto;
+      display: block;
+  }
+}
+
+table { 
+  table-layout:fixed;
+}
+
+td { 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  word-wrap: break-word;
+}
+
+
+.img-wrapper {
+  width: 100%;
+  height: 18vw;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 18vw;
+  object-fit: cover;
+}
+
+
+#root {
+  transition: margin-left .5s;
+}
+
+
+.property-fee{
+  float: right;
+}
+
+.img-wrapper:before {
+  display: block;
+  content: ""; 
+  background-image: url();
+  position: absolute;
+  width: icon height;
+  height: icon height;
+  top: XX;
+  left: XX; 
+  z-index: 1000; 
+}
+
+.carousel-item img{
+  height:350px;
+  width:80%;
+}
+
+/*Registration form*/
+
+#message {
+  display:none;
+  color: #000;
+  position: relative;
+}
+
+#message1 {
+  display:none;
+  color: red;
+  position: relative;
+}
+
+#message p {
+  padding: 1px 35px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+.user_account{
+  text-decoration:none;
+  font-size: 16px;
+  color:black;
+}
+
+.user_account:hover{
+  font-weight:bold;
+  color:black;
+}
+
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating > label{
+width:30px;
+height: 30px;
+font-family: Verdana;
+font-size: 30px;
+color: orange;
+}
+
+
+.star-rating label::before{
+content: '\2606';
+position:absolute;
+top:0px;
+line-height: 26px;
+}
+
+/*
+label {
+ border: 1px solid dodgerblue;
+}
+*/
+
+.star-rating input:checked ~ label:before{
+content:'\2605';
+}
+
+.star-rating{
+display: flex;
+width: 120px;
+flex-direction: row-reverse;
+justify-content: space-between;
+position: relative;
+}
+
+/*
+input[type=date]::-webkit-datetime-edit {
+  color: transparent;
+}*/
+/*
+.img-wrapper:hover:before {
+  content: "" 
+  background: url"" 
+}
+
+/* If user clicks on image, add active class that changes the icon to the liked version */
+/*
+.img-wrapper.active {
+  content: "" 
+  background: url"" 
+}
+*/
+
+
+
+

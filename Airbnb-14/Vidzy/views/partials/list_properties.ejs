@@ -1,0 +1,53 @@
+<div class="row">
+  <% properties.forEach(function(property){ %>
+    <div class="col col-md-3 d-flex mb-3 align-items-stretch">
+      <div class="card" style="width: 18rem;">
+        <img src="./<%= property.photo %>" class="img-wrapper" alt="Property <%= property.id %>">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= property.title %>
+              <a href="/addfavourite?id=<%=property._id%>&title=<%=property.title%>&city=<%=property.city%>&show=0" class="like-button " title="Like Button">
+              
+                <%if (user_details){%>
+                <% if (user_favourites.includes(property._id.toString())) { %>
+                  <i class="fa fa-heart property-fee"></i>
+                  <%} else { %>
+                    <i class="fa fa-heart-o property-fee"></i>
+                    <% } %>
+                  <%}else{%>
+                    <i class="fa fa-heart-o property-fee"></i>
+                    <%}%>
+                  </a>
+          </h5>
+          <h6>
+            <%= property.city %>, <%=property.location.state%>
+          </h6>
+
+          <p class="room-description">
+            <%= property.bedrooms %> bedroom &bull; <%= property.beds %> beds
+          </p>
+
+          <span>
+            <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+            <% for(var i=0; i < (property.rating/property.num_rating); i++) { %>
+              <span class="fa fa-star checked"></span>
+              <% } %>
+          </span>
+          <span class="property-fee">
+            <%=property.nightly_fee %>/night
+          </span><br /><br />
+          <div>
+            <span>
+              <%=property.description%>
+            </span>
+          </div>
+          <br>
+          <a href="/properties/<%= property._id %>" class="btn btn-primary">Show details</a>
+        </div>
+      </div>
+    </div>
+
+    <% }); %>
+
+</div>
