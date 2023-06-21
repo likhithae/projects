@@ -1,0 +1,213 @@
+[{
+  "_id": {
+    "$oid": "637947428eeac8b086935d62"
+  },
+  "check_in_date": "2022-11-21",
+  "check_out_date": "2022-11-24",
+  "guest_id": "1",
+  "property_id": "6373feccbb331bfb9b5b0dd2",
+  "number_of_guests": {
+    "adults": 2,
+    "children": 1
+  },
+  "booking_date": "2022-11-10",
+  "booking_status": "Completed",
+  "price": "$300",
+  "long_stay_discount": 0,
+  "guest_payment_details": "NULL",
+  "payment_method": "NULL",
+  "payment_date": "NULL",
+  "payment_status": "pending"
+},{
+  "_id": {
+    "$oid": "6395910610417b207069c37a"
+  },
+  "check_in_date": {
+    "$date": {
+      "$numberLong": "1670803200000"
+    }
+  },
+  "check_out_date": {
+    "$date": {
+      "$numberLong": "1671062400000"
+    }
+  },
+  "guest_id": "6392485b53c962780cca881e",
+  "property_id": "6390d4ad746cab8544a34f44",
+  "number_of_guests": {
+    "adults": "3",
+    "children": "0"
+  },
+  "booking_date": {
+    "$date": {
+      "$numberLong": "1670746374943"
+    }
+  },
+  "booking_status": "Completed",
+  "price": "$2430",
+  "long_stay_discount": 0,
+  "guest_payment_details": "NULL",
+  "payment_method": "NULL",
+  "payment_date": "NULL",
+  "payment_status": "pending"
+},{
+  "_id": {
+    "$oid": "639622a91d30bf2536195580"
+  },
+  "check_in_date": {
+    "$date": {
+      "$numberLong": "1670889600000"
+    }
+  },
+  "check_out_date": {
+    "$date": {
+      "$numberLong": "1670976000000"
+    }
+  },
+  "guest_id": "639622221d30bf253619557f",
+  "property_id": "6390d4ad746cab8544a34f44",
+  "number_of_guests": {
+    "adults": "3",
+    "children": "1"
+  },
+  "booking_date": {
+    "$date": {
+      "$numberLong": "1670783657140"
+    }
+  },
+  "booking_status": "Completed",
+  "price": "$1080",
+  "long_stay_discount": 0,
+  "guest_payment_details": "NULL",
+  "payment_method": "NULL",
+  "payment_date": "NULL",
+  "payment_status": "pending"
+},{
+  "_id": {
+    "$oid": "63963f40b0e9ee2b152b1281"
+  },
+  "check_in_date": {
+    "$date": {
+      "$numberLong": "1670803200000"
+    }
+  },
+  "check_out_date": {
+    "$date": {
+      "$numberLong": "1670976000000"
+    }
+  },
+  "guest_id": "6392485b53c962780cca881e",
+  "property_id": "6390d4ad746cab8544a34f44",
+  "number_of_guests": {
+    "adults": "2",
+    "children": "0"
+  },
+  "booking_date": {
+    "$date": {
+      "$numberLong": "1670790976401"
+    }
+  },
+  "booking_status": "Completed",
+  "price": "$1080",
+  "long_stay_discount": 0,
+  "guest_payment_details": "NULL",
+  "payment_method": "NULL",
+  "payment_date": "NULL",
+  "payment_status": "pending"
+},{
+  "_id": {
+    "$oid": "63966af0fef54f35f9832912"
+  },
+  "check_in_date": {
+    "$date": {
+      "$numberLong": "1671580800000"
+    }
+  },
+  "check_out_date": {
+    "$date": {
+      "$numberLong": "1671667200000"
+    }
+  },
+  "guest_id": "6392485b53c962780cca881e",
+  "property_id": "6390d4ec746cab8544a34f46",
+  "number_of_guests": {
+    "adults": "2",
+    "children": "0"
+  },
+  "booking_date": {
+    "$date": {
+      "$numberLong": "1670802160669"
+    }
+  },
+  "booking_status": "Completed",
+  "price": "$380",
+  "long_stay_discount": 0,
+  "guest_payment_details": "NULL",
+  "payment_method": "NULL",
+  "payment_date": "NULL",
+  "payment_status": "pending"
+},{
+  "_id": {
+    "$oid": "63966b18fef54f35f9832913"
+  },
+  "check_in_date": {
+    "$date": {
+      "$numberLong": "1671840000000"
+    }
+  },
+  "check_out_date": {
+    "$date": {
+      "$numberLong": "1671926400000"
+    }
+  },
+  "guest_id": "6392485b53c962780cca881e",
+  "property_id": "6390d4ad746cab8544a34f44",
+  "number_of_guests": {
+    "adults": "1",
+    "children": "0"
+  },
+  "booking_date": {
+    "$date": {
+      "$numberLong": "1670802200483"
+    }
+  },
+  "booking_status": "Completed",
+  "price": "$270",
+  "long_stay_discount": 0,
+  "guest_payment_details": "NULL",
+  "payment_method": "NULL",
+  "payment_date": "NULL",
+  "payment_status": "pending"
+},{
+  "_id": {
+    "$oid": "6396713ceb1348377f9a2c1f"
+  },
+  "check_in_date": {
+    "$date": {
+      "$numberLong": "1670889600000"
+    }
+  },
+  "check_out_date": {
+    "$date": {
+      "$numberLong": "1670976000000"
+    }
+  },
+  "guest_id": "639670caeb1348377f9a2c1e",
+  "property_id": "6390d4ad746cab8544a34f44",
+  "number_of_guests": {
+    "adults": "2",
+    "children": "0"
+  },
+  "booking_date": {
+    "$date": {
+      "$numberLong": "1670803772239"
+    }
+  },
+  "booking_status": "Completed",
+  "price": "$540",
+  "long_stay_discount": 0,
+  "guest_payment_details": "NULL",
+  "payment_method": "NULL",
+  "payment_date": "NULL",
+  "payment_status": "pending"
+}]

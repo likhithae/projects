@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "6394416bb5bad0f079c4dc30"
+  },
+  "user_id": "6394148a746cab8544a35021",
+  "property_id": "6390d2ec746cab8544a34f42",
+  "username": "likhitha",
+  "rating": "1",
+  "comment": "",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670661367017"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639444f7a5187cf22bdc36c9"
+  },
+  "user_id": "6394148a746cab8544a35021",
+  "property_id": "6390d2ec746cab8544a34f42",
+  "username": "Sam",
+  "rating": "2",
+  "comment": "Great",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670661367017"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6395194603866df4cdf96702"
+  },
+  "user_id": "6392485b53c962780cca881e",
+  "property_id": "6390d2ec746cab8544a34f42",
+  "username": "Priya",
+  "rating": "3",
+  "comment": "Awesome!",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670715718204"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63958ca69de3f31f74771b48"
+  },
+  "user_id": "6392485b53c962780cca881e",
+  "property_id": "6390d2ec746cab8544a34f42",
+  "username": "likhitha",
+  "rating": "3",
+  "comment": "This is by far the best airbnb of all time! The space was so unique and artfully designed",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670745254804"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63958d829de3f31f74771b49"
+  },
+  "user_id": "6392485b53c962780cca881e",
+  "property_id": "6390d485746cab8544a34f43",
+  "username": "likhitha",
+  "rating": "2",
+  "comment": "The pictures really do not do this place justice. It was a stunning home. The home, the property, and the location are all beautiful!",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670745474812"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63958dcc9de3f31f74771b4a"
+  },
+  "user_id": "6392485b53c962780cca881e",
+  "property_id": "6390d4bd746cab8544a34f45",
+  "username": "likhitha",
+  "rating": "5",
+  "comment": "Everything you need for a perfect cabin getaway. They have thought of everything you could possibly need.",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670745548851"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63963896a8b02f2891f70e15"
+  },
+  "user_id": "639622221d30bf253619557f",
+  "property_id": "6390d4ad746cab8544a34f44",
+  "username": "likhitha",
+  "rating": "3",
+  "comment": "Awesome",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670789270449"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639638f7b0e9ee2b152b1280"
+  },
+  "user_id": "639622221d30bf253619557f",
+  "property_id": "6390d4ec746cab8544a34f46",
+  "username": "likhitha",
+  "rating": "2",
+  "comment": "Great location and facilities",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670789367222"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63967169eb1348377f9a2c21"
+  },
+  "user_id": "639670caeb1348377f9a2c1e",
+  "property_id": "6390d485746cab8544a34f43",
+  "username": "henry",
+  "rating": "4",
+  "comment": "great",
+  "date_posted": {
+    "$date": {
+      "$numberLong": "1670803817380"
+    }
+  }
+}]

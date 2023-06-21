@@ -1,0 +1,510 @@
+[{
+  "_id": {
+    "$oid": "6390d2ec746cab8544a34f42"
+  },
+  "id": "1",
+  "title": "Hillside Hideaway",
+  "city": "Wills Point",
+  "description": "Rustic Private Cottage w/ King Bed + Oceanside View",
+  "nightly_fee": "$219",
+  "cleaning_fee": "$30",
+  "service_fee": "$55",
+  "amenities": [
+    "Free wifi",
+    "Free parking on premises",
+    "Garden view",
+    "Patio or balcony",
+    "TV",
+    "Kitchen"
+  ],
+  "symbols": [
+    "fas fa-wifi",
+    "fas fa-utensils",
+    "fas fa-car",
+    "fas fa-tv",
+    "bi bi-flower3",
+    "bi bi-house-door-fill"
+  ],
+  "bedrooms": "2",
+  "beds": "3",
+  "photo": "/images/001.jpeg",
+  "all_photos": [
+    "/images/001.jpeg",
+    "/images/001_1.jpeg",
+    "/images/001_2.jpeg"
+  ],
+  "rating": 5,
+  "reviews": [
+    {
+      "username": "Priya",
+      "user_id": "6392485b53c962780cca881e",
+      "rating": "2",
+      "comment": "Awesome",
+      "date_posted": "2022-12-10T23:41:58.204+00:00"
+    },
+    {
+      "user_id": "6392485b53c962780cca881e",
+      "username": "likhitha",
+      "rating": "3",
+      "comment": "This is by far the best airbnb of all time! The space was so unique and artfully designed",
+      "date_posted": {
+        "$date": {
+          "$numberLong": "1670745254804"
+        }
+      }
+    }
+  ],
+  "favourite": false,
+  "host": "Mary",
+  "full_description": "Located in Wills Point, this is a cozy cottage that was originally a church in the early 1900’s. It has original floors, full kitchen and tons of country charm. We are a working farm, so expect chickens pecking around the yard, our big Great Pyrenees Moose meeting you at the drive, and the horse begging for some treats! There is a cozy fire pit out back and you also have a private driveway entrance with covered boat parking available upon request. The cottage features two large bedrooms with walk-in closet, full kitchen with appliances and a nice bathroom with bathtub/shower combo. The living room has a queen sized sofa bed. The decor is country cute and cozy. The bedroom is very spacious with a television located in the armoire, as well as a large HD Roku TV in the living room.\n                ",
+  "availability": [
+    {
+      "from": "2022-12-12",
+      "to": "2022-12-20"
+    }
+  ],
+  "capacity": "20",
+  "cancellation_policy": "This reservation is non-refundable.\nReview the Host’s full cancellation policy which applies even if you cancel for illness or disruptions caused by COVID-19.",
+  "house_rules": "Check-in after 2:00 PM\nCheckout before 11:00 AM\nSelf check in\nMust be at least 30 years old to book and booking individual must be present during the stay. Occupancy is limited to 8 guests.\n                 ",
+  "location": {
+    "street": "800 w",
+    "city": "Wills Point",
+    "state": "texas",
+    "zipcode": "75169",
+    "country": "United stated"
+  },
+  "property_type": "House",
+  "status": "available",
+  "num_rating": 2,
+  "host_id": "6394148a746cab8544a35021"
+},{
+  "_id": {
+    "$oid": "6390d485746cab8544a34f43"
+  },
+  "id": "2",
+  "title": "The Glenn",
+  "city": "Kingston",
+  "description": "Enjoy Sunsets at Fully Equipped 2BR Condo",
+  "nightly_fee": "$175",
+  "cleaning_fee": "$25",
+  "service_fee": "$40",
+  "amenities": [
+    "Free wifi",
+    "Free parking on premises",
+    "TV"
+  ],
+  "symbols": [
+    "fas fa-wifi",
+    "fas fa-utensils",
+    "fas fa-car",
+    "fas fa-tv",
+    "fas fa-swimming-pool",
+    "fas fa-paw"
+  ],
+  "bedrooms": "2",
+  "beds": "2",
+  "photo": "/images/002.jpeg",
+  "all_photos": [
+    "/images/002.jpeg",
+    "/images/002_1.jpeg",
+    "/images/002_2.jpeg"
+  ],
+  "rating": 6,
+  "reviews": [
+    "",
+    {
+      "user_id": "6392485b53c962780cca881e",
+      "username": "likhitha",
+      "rating": "2",
+      "comment": "The pictures really do not do this place justice. It was a stunning home. The home, the property, and the location are all beautiful!",
+      "date_posted": {
+        "$date": {
+          "$numberLong": "1670745474812"
+        }
+      }
+    },
+    {
+      "user_id": "639670caeb1348377f9a2c1e",
+      "username": "henry",
+      "rating": "4",
+      "comment": "great",
+      "date_posted": {
+        "$date": {
+          "$numberLong": "1670803817380"
+        }
+      }
+    }
+  ],
+  "favourite": false,
+  "host": "Aureliano",
+  "full_description": "The apartment is on third floor with a 25 m2 terrace. Panoramic view of the entire city. It has three bedrooms, the largerst with AC and the other two with fans. To access the house it is necessary to use the stairs, but undoubtedly the view is worth every step. Our apartment has 24 hours hot and cold water, Internet connection by prepaid cards from ETECSA with cell phone or laptop from any place in the apartment. Our location allows guests to quickly access both the Historic district and downtown. Cafes, supermarkets, shops and nightclubs are very near us.\r\n                \r\n                ",
+  "availability": [
+    {
+      "from": {
+        "$date": {
+          "$numberLong": "1670716800000"
+        }
+      },
+      "to": "2022-12-13"
+    },
+    {
+      "from": "2023-03-13",
+      "to": "2023-03-24"
+    },
+    {
+      "from": "2022-12-16",
+      "to": {
+        "$date": {
+          "$numberLong": "1675209600000"
+        }
+      }
+    }
+  ],
+  "capacity": "30",
+  "cancellation_policy": "This reservation is non-refundable.\r\nReview the Host’s full cancellation policy which applies even if you cancel for illness or disruptions caused by COVID-19.\r\n                 ",
+  "house_rules": "Check-in after 2:00 PM\r\nCheckout before 11:00 AM\r\nSelf check in\r\nMust be at least 30 years old to book and booking individual must be present during the stay. Occupancy is limited to 8 guests.\r\n                 ",
+  "location": {
+    "street": "1st Avenue",
+    "city": "Kingston",
+    "state": "Oklahoma",
+    "zipcode": "12401",
+    "country": "United stated"
+  },
+  "property_type": "Apartment",
+  "status": "available",
+  "num_rating": 2
+},{
+  "_id": {
+    "$oid": "6390d4ad746cab8544a34f44"
+  },
+  "id": "3",
+  "title": "Casita",
+  "city": "Ennis",
+  "description": "Modern style Guesthouse with BBQ Pation and pool",
+  "nightly_fee": "$270",
+  "cleaning_fee": "$50",
+  "service_fee": "$65",
+  "amenities": [
+    "Free wifi",
+    "Free parking on premises",
+    "Garden view",
+    "TV",
+    "Kitchen"
+  ],
+  "symbols": [
+    "fas fa-wifi",
+    "fas fa-utensils",
+    "fas fa-car",
+    "fas fa-tv",
+    "bi bi-flower2",
+    "fas fa-swimming-pool"
+  ],
+  "bedrooms": "3",
+  "beds": "5",
+  "photo": "/images/003.jpeg",
+  "all_photos": [
+    "/images/003.jpeg",
+    "/images/003_1.jpeg",
+    "/images/003_2.jpeg"
+  ],
+  "rating": 3,
+  "reviews": [
+    "",
+    {
+      "user_id": "639622221d30bf253619557f",
+      "username": "likhitha",
+      "rating": "3",
+      "comment": "Awesome",
+      "date_posted": {
+        "$date": {
+          "$numberLong": "1670789270449"
+        }
+      }
+    }
+  ],
+  "favourite": false,
+  "host": "Cassie",
+  "availability": [
+    {
+      "from": {
+        "$date": {
+          "$numberLong": "1670716800000"
+        }
+      },
+      "to": {
+        "$date": {
+          "$numberLong": "1670803200000"
+        }
+      }
+    },
+    {
+      "from": {
+        "$date": {
+          "$numberLong": "1672012800000"
+        }
+      },
+      "to": "2022-12-26"
+    },
+    {
+      "from": {
+        "$date": {
+          "$numberLong": "1677650400000"
+        }
+      },
+      "to": {
+        "$date": {
+          "$numberLong": "1678428000000"
+        }
+      }
+    },
+    {
+      "from": "2022-12-14",
+      "to": {
+        "$date": {
+          "$numberLong": "1671062400000"
+        }
+      }
+    },
+    {
+      "from": "2022-12-28",
+      "to": {
+        "$date": {
+          "$numberLong": "1672358400000"
+        }
+      }
+    }
+  ],
+  "capacity": "15",
+  "full_description": "Amazing acre estate that has so much to offer! Spacious & Luxury+ guest house with true resort backyard. Bonus room & theater room. Casita has 2 large bedrooms & bathrooms. Entertainers dream backyard with htd pool & spa with rock water slide, rock waterfall, lush green grass, built-in trampoline, playset, brandnew pickleball court, putting green & so much more. Your own private oasis paradise with comfortable furnishings and resort amenities. Wonderland for all ages. IN-HOME CHEF+IN HOME MASSAGE THERAPIST+GROCEY DELIVERY SERVICE+TRANSPORTATION+OPTION FOR DAILY CLEANING+PERSONAL TRAINER & MORE. At the back of the home is a resort-style backyard - your own private oasis paradise with comfortable furnishings and resort amenities.\r\n                ",
+  "cancellation_policy": "Free cancellation before Dec 23.\r\nReview the Host’s full cancellation policy which applies even if you cancel for illness or disruptions caused by COVID-19.",
+  "house_rules": "Check-in: 4:00 PM - 10:00 PM\r\nCheckout before 11:00 AM\r\n",
+  "location": {
+    "street": "sw main street",
+    "city": "Ennis",
+    "state": "Texas",
+    "zipcode": "75119",
+    "country": "United stated"
+  },
+  "property_type": "House",
+  "status": "available",
+  "num_rating": 1
+},{
+  "_id": {
+    "$oid": "6390d4bd746cab8544a34f45"
+  },
+  "id": "4",
+  "title": "Moose Haven Cabin",
+  "city": "Canton",
+  "description": "Enjoy Secluded Cabin w/ Deck Jacuzzi ",
+  "nightly_fee": "$204",
+  "cleaning_fee": "$44",
+  "service_fee": "$58",
+  "amenities": [
+    "Free parking on premises",
+    "Garden view",
+    "TV",
+    "Kitchen"
+  ],
+  "symbols": [
+    "fas fa-utensils",
+    "fas fa-car",
+    "fas fa-tv",
+    "bi bi-flower2",
+    "fas fa-hot-tub",
+    "fas fa-snowflake"
+  ],
+  "bedrooms": "1",
+  "beds": "2",
+  "photo": "/images/004.jpeg",
+  "all_photos": [
+    "/images/004.jpeg",
+    "/images/004_1.jpeg",
+    "/images/004_2.jpeg"
+  ],
+  "rating": 5,
+  "reviews": [
+    "",
+    {
+      "user_id": "6392485b53c962780cca881e",
+      "username": "likhitha",
+      "rating": "5",
+      "comment": "Everything you need for a perfect cabin getaway. They have thought of everything you could possibly need.",
+      "date_posted": {
+        "$date": {
+          "$numberLong": "1670745548851"
+        }
+      }
+    }
+  ],
+  "favourite": false,
+  "host": "Tamara",
+  "availability": [
+    {
+      "from": "12/12/2022",
+      "to": "1/1/2023"
+    },
+    {
+      "from": "2/1/2023",
+      "to": "3/1/2023"
+    }
+  ],
+  "capacity": "40",
+  "full_description": "The location is ideal for getting off the grid and enjoying private trails for hiking, biking and snowshoe. The location is remote and beautiful. The Moose Haven is at about 9000 feet along the Park Range in the Rocky Mountains. The heat is furnished by a wood stove that does require stoking through cold nights. The composting bathroom is 20 feet away and the shower house a short walk. Water is supplied as the Moose Haven is a dry cabin. The remoteness, views, ability to have pets make this spot special. There is lots of Timothy Grass for horses, llamas or alpacas. Hiking, biking, xc ski or snowshoe opportunities right from your cabin to our Elk Run Trail or into Forest. Downstairs is a full and twin bed and a queen fold out sofa bed upstairs. There isn't running water in the cabin however well water is provided.\r\n                ",
+  "cancellation_policy": "This reservation is non-refundable.\r\nReview the Host’s full cancellation policy which applies even if you cancel for illness or disruptions caused by COVID-19.",
+  "house_rules": "Check-in after 4:00 PM\r\nCheckout before 12:00 PM",
+  "location": {
+    "street": "30th st ne",
+    "city": "Canton",
+    "state": "Texas",
+    "zipcode": "75103",
+    "country": "United stated"
+  },
+  "property_type": "Cabin",
+  "status": "available",
+  "num_rating": 1
+},{
+  "_id": {
+    "$oid": "6390d4ec746cab8544a34f46"
+  },
+  "id": "5",
+  "title": "Peak nests",
+  "city": "Richardson",
+  "description": "City with a good view",
+  "nightly_fee": "$190",
+  "cleaning_fee": "$0",
+  "service_fee": "$0",
+  "amenities": [
+    "Free wifi",
+    "Free parking on premises",
+    "Patio or balcony"
+  ],
+  "bedrooms": "2",
+  "beds": "0",
+  "photo": "/images/img1.jpeg",
+  "all_photos": [
+    "/images/img1.jpeg",
+    "/images/img1.jpeg",
+    "/images/img1.jpeg"
+  ],
+  "rating": 2,
+  "reviews": [
+    "",
+    {
+      "user_id": "639622221d30bf253619557f",
+      "username": "likhitha",
+      "rating": "2",
+      "comment": "Great location and facilities",
+      "date_posted": {
+        "$date": {
+          "$numberLong": "1670789367222"
+        }
+      }
+    }
+  ],
+  "favourite": false,
+  "host": "Max",
+  "availability": [
+    {
+      "from": {
+        "$date": {
+          "$numberLong": "1670716800000"
+        }
+      },
+      "to": {
+        "$date": {
+          "$numberLong": "1671062400000"
+        }
+      }
+    },
+    {
+      "from": {
+        "$date": {
+          "$numberLong": "1671494400000"
+        }
+      },
+      "to": "2022-12-20"
+    },
+    {
+      "from": {
+        "$date": {
+          "$numberLong": "1675209600000"
+        }
+      },
+      "to": {
+        "$date": {
+          "$numberLong": "1677628800000"
+        }
+      }
+    },
+    {
+      "from": "2022-12-22",
+      "to": {
+        "$date": {
+          "$numberLong": "1672358400000"
+        }
+      }
+    }
+  ],
+  "capacity": "5",
+  "full_description": "City with a good view \r\n                ",
+  "cancellation_policy": "                 ",
+  "house_rules": "                 ",
+  "location": {
+    "street": "West campbell",
+    "city": "Richardson",
+    "state": "Texas",
+    "zipcode": "75080",
+    "country": "United stated"
+  },
+  "property_type": "House",
+  "status": "available",
+  "num_rating": 1,
+  "host_id": "6394148a746cab8544a35021"
+},{
+  "_id": {
+    "$oid": "63967202eb1348377f9a2c23"
+  },
+  "id": "6",
+  "title": "Mill mansion",
+  "city": "Richardson",
+  "description": "Stunning luxury estate.",
+  "nightly_fee": "$100",
+  "cleaning_fee": "$10",
+  "service_fee": "$10",
+  "amenities": [
+    "Free parking on premises",
+    "Patio or balcony"
+  ],
+  "bedrooms": "10",
+  "beds": "3",
+  "photo": "/uploads/image1670803970557.jpeg",
+  "all_photos": [
+    "/uploads/image1670803970557.jpeg",
+    "/uploads/all_photos1670803970565.jpeg"
+  ],
+  "rating": 0,
+  "num_rating": 0,
+  "reviews": [],
+  "favourite": false,
+  "host": "Henry",
+  "host_id": "639670caeb1348377f9a2c1e",
+  "full_description": "The spectacular estate was designed to bring the outdoors in with a resort-style pool, hot tub, 3 balconies, and an outdoor kitchen & fireplace, while inside there’s a fully equipped kitchen, spacious living areas, and 5 generous bedrooms.\r\n\r\n",
+  "capacity": "10",
+  "property_type": "Mansion",
+  "cancellation_policy": "This reservation is non-refundable.\r\nReview the Host’s full cancellation policy which applies even if you cancel for illness or disruptions caused by COVID-19.\r\n",
+  "house_rules": "Check-in after 3:00 PM\r\nCheckout before 11:00 AM\r\n",
+  "location": {
+    "street": "800 w",
+    "city": "Richardson",
+    "state": "Texas",
+    "zipcode": "75080",
+    "country": "United stated"
+  },
+  "availability": [
+    {
+      "from": "2022-12-14",
+      "to": "2022-12-31"
+    }
+  ],
+  "status": "available"
+}]

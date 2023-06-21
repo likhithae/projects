@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "6392485b53c962780cca881e"
+  },
+  "first_name": "likhitha",
+  "last_name": "emmadi",
+  "email_id": "e@gmail.com",
+  "hashed_password": "$2a$10$EeV5EofSMTjmDI8ZLmJNMufkIvQaG/727LBYyVdmxmm52MNiIBffq",
+  "phone_number": "123-456-7890",
+  "date_of_birth": "2000-12-09",
+  "date_registered": {
+    "$date": {
+      "$numberLong": "1670531163210"
+    }
+  },
+  "profile_photo_url": "/uploads/profile_photo_url1670573895489.jpg",
+  "is_guest": true,
+  "is_host": false,
+  "favourites": [
+    {
+      "property_id": "6390d2ec746cab8544a34f42",
+      "property_title": "Hillside Hideaway",
+      "property_city": "Wills Point"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6394148a746cab8544a35021"
+  },
+  "first_name": "Mary",
+  "last_name": "Kay",
+  "email_id": "mary@gmail.com",
+  "hashed_password": "$2a$10$LDsVy9QZrv6xUDjnHxbFuuNCLXvnUfNNuGqRlYU.tdqTSqXS7fkgO",
+  "phone_number": "123-456-7890",
+  "date_of_birth": "2011-01-09",
+  "date_registered": {
+    "$date": {
+      "$numberLong": "1670648781799"
+    }
+  },
+  "profile_photo_url": "/uploads/default_profile.jpg",
+  "is_guest": true,
+  "is_host": true,
+  "favourites": []
+},{
+  "_id": {
+    "$oid": "639622221d30bf253619557f"
+  },
+  "first_name": "Priya",
+  "last_name": "S",
+  "email_id": "p@gmail.com",
+  "hashed_password": "$2a$10$Desr334z/1Ikztn1MyItSOUUK07ieRb8qFVDN4XpHZWdJBorT1nPe",
+  "phone_number": "123-456-7890",
+  "date_of_birth": "2009-02-11",
+  "date_registered": {
+    "$date": {
+      "$numberLong": "1670783522625"
+    }
+  },
+  "profile_photo_url": "/uploads/default_profile.jpg",
+  "is_guest": true,
+  "is_host": true,
+  "favourites": []
+},{
+  "_id": {
+    "$oid": "639670caeb1348377f9a2c1e"
+  },
+  "first_name": "Henry",
+  "last_name": "River",
+  "email_id": "henry@gmail.com",
+  "hashed_password": "$2a$10$isbDxLTQ30JOtuzwpORrceVAtA55hhB0ZHn56OKrS51PSdDNfo8iK",
+  "phone_number": "123-456-7890",
+  "date_of_birth": "2000-02-11",
+  "date_registered": {
+    "$date": {
+      "$numberLong": "1670803658179"
+    }
+  },
+  "profile_photo_url": "/uploads/profile_photo_url1670803658175.jpeg",
+  "is_guest": true,
+  "is_host": true,
+  "favourites": [
+    {
+      "property_id": "6390d485746cab8544a34f43",
+      "property_title": "The Glenn",
+      "property_city": "Kingston"
+    },
+    {
+      "property_id": "6390d2ec746cab8544a34f42",
+      "property_title": "Hillside Hideaway",
+      "property_city": "Wills Point"
+    },
+    {
+      "property_id": "6390d4bd746cab8544a34f45",
+      "property_title": "Moose Haven Cabin",
+      "property_city": "Canton"
+    }
+  ]
+}]
