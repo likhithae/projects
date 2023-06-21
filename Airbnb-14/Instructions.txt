@@ -1,0 +1,19 @@
+
+
+Steps to run the Project
+->  cd vidzy
+->  Install all the below packages
+        node --version
+        Install node if it is not installed 
+        Install express if it is not installed  (sudo npm install -g express-generator)
+        Install nodemon if it is not installed  (sudo npm install nodemon -g)
+        npm install monk --save
+        npm install express mongoose cors jsonwebtoken bcryptjs --save
+        npm install req-flash
+        npm install connect-flash express express-session cookie-parser --save
+        npm i dotenv
+        npm i multer
+->  Create a database in mongodb with name vidzy and import all the documents in the folder 	    databse_collection into the created database
+        users.json, host.json, properties.json, reservations.json, reviews.json
+->  Start the mongodb server using 'mongod' command and connect to the server
+->  In another terminal run 'nodemon'
