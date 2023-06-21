@@ -1,0 +1,155 @@
+<%- include('partials/header') %>
+
+
+    <div class="container mb-5 mt-5 property-list">
+        <br><br>
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card">
+                        <div class="rounded-top text-white d-flex flex-row"
+                            style="background-color: #000; height:200px;">
+                            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                                <img src="<%=user.profile_photo_url%>" alt="Profile photo"
+                                    class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+
+                            </div>
+                            <div class="ms-3" style="margin-top: 130px;">
+                                <h5>
+                                    <%=user.first_name%>
+                                        <%=user.last_name%>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                            <div class="d-flex text-center">
+                                <a href="/account" class="user_account pe-5 ps-2" style="font-size:20px;">&nbsp;&nbsp;My profile</a>
+                            </div>
+                            <div class="d-flex justify-content-end text-center py-1 pe-5">
+                                <a href="/editprofile/<%=user._id%>" class="user_account pe-5">&nbsp;&nbsp;<strong>Edit
+                                    profile</strong>&nbsp;<i class="fas fa-pen me-3"></i></a>
+                                <a href="/reservations/list/<%=user._id%>" class="user_account pe-5">Reservations&nbsp;<i
+                                        class="fas fa-hotel me-3"></i></a>
+                                <a href="/favourites/<%=user._id%>" class="user_account">Favourites &nbsp;<i
+                                        class="fas fa-heart me-3"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 text-black">
+                            <div class="mb-5">
+                                <p class="lead fw-normal mb-1">Edit details</p>
+                                <div class="p-4">
+                                    <form action="/editprofile/<%=user._id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                                        <div class="row mb-3">
+                                            <label for="first_name" class="col-sm-2 col-form-label">First Name</label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="first_name"
+                                                    name="first_name" value="<%=user.first_name%>" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="last_name" class="col-sm-2 col-form-label">Last Name</label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="last_name" name="last_name"
+                                                    value="<%=user.last_name%>" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="date_of_birth" class="col-sm-2 col-form-label">Date of
+                                                birth</label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="date_of_birth"
+                                                    name="date_of_birth" value="<%=user.date_of_birth%>" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="email_id" class="col-sm-2 col-form-label">Email</label>
+                                            <div class="col-sm-4">
+                                                <input type="email" class="form-control" id="email_id" name="email_id"
+                                                    value="<%=user.email_id%>" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="phone_number" class="col-sm-2 col-form-label">Phone
+                                                number</label>
+                                            <div class="col-sm-4">
+                                                <input type="tel" id="phone_number" name="phone_number"
+                                                    class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                    value="<%=user.phone_number%>" required />
+
+                                            </div>
+                                        </div>
+
+                                        <%if (host){%>
+                                            <div class="row mb-3">
+                                              <label for="short_description" class="col-sm-2 col-form-label">Short Description</label>
+                                              <div class="col-sm-4">
+                                                <textarea class="form-control" id="short_description" name="short_description" rows="5"><%=host.short_description%></textarea>
+                                              </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                              <label for="languages_known" class="col-sm-2 col-form-label">Languages Known</label>
+                                              <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="languages_known" name="languages_known" value="<%=host.languages_known%>">
+                                              </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                              <label for="co_hosts" class="col-sm-2 col-form-label">Co hosts</label>
+                                              <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="co_hosts" name="co_hosts" value="<%=user.co_hosts%>">
+                                              </div>
+                                            </div>
+                                            <%}%>
+
+
+                                        <div class="form-group col-md-5 p-2" style="display:none;">
+                                            <input type="text" id="old_image" name="old_image" class="form-control" value="<%=user.profile_photo_url%>">
+                                        </div>
+                                        
+                                        <div class="form-group col-md-4">
+                                            <div class=" thumbnail">
+                                                <label for="new_main_image">Replace profile photo</label>
+                                                <input type="checkbox" id="new_main_image" onclick="browseButton()" name="new_main_image">
+                                                <br>
+                                                <div class="form-group col-md-5 pt-2">
+                                                    <input type="file" id="profile_photo_url" name="profile_photo_url" accept="image/png, image/jpg, image/jpeg"  style="display: none;">
+                                                </div>
+                                                <script>
+                                                    function browseButton() {
+                                                        var checkbox = document.getElementById("new_main_image");
+                                                        var button = document.getElementById("profile_photo_url");
+                            
+                                                        if (checkbox.checked == true) {
+                                                            button.style.display = "inline";
+                                                        } else {
+                                                            button.style.display = "none";
+                                                        }
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group col-md-5 p-2">
+                                            <button type="submit" id="add" class="btn btn-primary btn-lg">Save  Changes</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <%- include('partials/footer') %>

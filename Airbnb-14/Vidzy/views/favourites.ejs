@@ -1,0 +1,88 @@
+<%- include('partials/header') %>
+
+
+    <div class="container mb-5 mt-5 property-list">
+        <br><br>
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card">
+                        <div class="rounded-top text-white d-flex flex-row"
+                            style="background-color: #000; height:200px;">
+                            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                                <img src="<%=user.profile_photo_url%>" alt="Generic placeholder image"
+                                    class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+
+                            </div>
+                            <div class="ms-3" style="margin-top: 130px;">
+                                <h5>
+                                    <%=user.first_name%>
+                                        <%=user.last_name%>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                            <div class="d-flex text-center">
+                                <a href="/account" class="user_account pe-5 ps-2" style="font-size:20px;">&nbsp;&nbsp;My
+                                    profile</a>
+                            </div>
+                            <div class="d-flex justify-content-end text-center py-1 pe-5">
+                                <a href="/editprofile/<%=user._id%>" class="user_account pe-5">&nbsp;&nbsp;Edit
+                                    profile&nbsp;<i class="fas fa-pen me-3"></i></a>
+                                <a href="/reservations/list/<%=user._id%>"
+                                    class="user_account pe-5">Reservations</strong>&nbsp;<i
+                                        class="fas fa-hotel me-3"></i></a>
+                                <a href="/favourites/<%=user._id%>" class="user_account"><strong>Favourites</strong>
+                                    &nbsp;<i class="fas fa-heart me-3"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 text-black">
+                            <div class="col-md-8 mb-5">
+                                <p class="lead fw-normal mb-1">Favourites</p>
+                                <br>
+                                <%if (user.favourites.length>0){%>
+                                <table class="table table-hover me-5 ms-5">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="padding: 15px;">Property title</th>
+                                            <th scope="col" style="padding: 15px;">City</th>
+                                            <th scope="col" style="padding: 15px;"></th>
+                                            <th scope="col" style="padding: 15px;">Remove from Favourites</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% user.favourites.forEach(function(favourite){ %>
+                                        <tr>
+                                            <td style="padding: 15px;">
+                                                <%=favourite.property_title%>
+                                            </td>
+                                            <td style="padding: 15px;">
+                                                <%=favourite.property_city%>
+                                            </td>
+                                            <td style="padding: 15px;">
+                                                <a href="/properties/<%=favourite.property_id%>">More Details</a>
+                                            </td>
+                                            <td style="padding: 15px;">
+                                                <a href="/removefavourite?id=<%=favourite.property_id%>"><i class="fas fa-trash ps-5" style="color:black"></i></a>
+                                            </td>
+                                        </tr>
+                                        <%});%>
+                                    </tbody>
+                                </table>
+                                <%}%>
+                                <br>
+                                <a href="/" class="btn btn-primary btn-lg" type="button">Add to favourites</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <%- include('partials/footer') %>

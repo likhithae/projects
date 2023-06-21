@@ -1,0 +1,96 @@
+
+
+<%- include('partials/header') %>
+
+
+<div class="container mb-5 mt-5 property-list">
+    <br><br>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card">
+                    <div class="rounded-top text-white d-flex flex-row"
+                        style="background-color: #000; height:200px;">
+                        <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                            <img src="<%=user.profile_photo_url%>"
+                                alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                                style="width: 150px; z-index: 1">
+                           
+                        </div>
+                        <div class="ms-3" style="margin-top: 130px;">
+                            <h5><%=user.first_name%> <%=user.last_name%></h5>
+                        </div>
+                    </div>
+                    <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                      <div class="d-flex text-center">
+                        <a href="/account" class="user_account pe-5 ps-2" style="font-size:20px;">&nbsp;&nbsp;My profile</a>
+                    </div>
+                        <div class="d-flex justify-content-end text-center py-1 pe-5">
+                            <a href="/editprofile/<%=user._id%>" class="user_account pe-5">&nbsp;&nbsp;Edit profile&nbsp;<i class="fas fa-pen me-3"></i></a>
+                            <a href="/reservations/list/<%=user._id%>" class="user_account pe-5"><strong>Reservations</strong>&nbsp;<i class="fas fa-hotel me-3"></i></a>
+                            <a href="/favourites/<%=user._id%>" class="user_account">Favourites &nbsp;<i class="fas fa-heart me-3"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 text-black">
+                        <div class="mb-5">
+                            <p class="lead fw-normal mb-1">Reservations</p>
+                            <br>
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th scope="col" style="padding: 15px;">Status</th>
+                                  <th scope="col" style="padding: 15px;">Guests</th>
+                                  <th scope="col" style="padding: 15px;">Check in</th>
+                                  <th scope="col" style="padding: 15px;">Check out</th>
+                                  <th scope="col" style="padding: 15px;">Booked</th>
+                                  <th scope="col" style="padding: 15px;">Listing</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <% reservations.forEach(function(reservation){ %>
+                                <tr>
+                                    <td style="padding: 15px;">
+                                      <%= reservation.booking_status %>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                      <%= parseInt(reservation.number_of_guests.adults) + parseInt(reservation.number_of_guests.children) %>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                      <%= new Date(reservation.check_in_date).toLocaleDateString() %>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                      <%= new Date(reservation.check_out_date).toLocaleDateString() %>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                      <%= new Date(reservation.booking_date).toLocaleDateString()%>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                      <%= reservation.property_id %>
+                                    </td>
+                                    <td style="padding: 15px;">
+                                      <a href="/reservations/<%= reservation._id%>/details">Details</a>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        
+                              </tbody>
+                            </table>
+                        
+                            <br>
+                            <a href="/" class="btn btn-primary btn-lg" type="button">Add a new reservation</a>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<%- include('partials/footer') %>
+
+

@@ -1,0 +1,288 @@
+<%- include('partials/header') %>
+
+    <div class="container mb-5 mt-5 p-5">
+        <!--<a href="/properties/<%= property._id%>">Back to property</a>-->
+        <br><br>
+
+        <%if (message & message=='1' ){%>
+            <div class="alert alert-danger col-md-5 p-2">Available dates are not valid. Please try again
+            </div>
+        <%}%>
+
+        <form action="/properties/<%= property._id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="form-group col-md-5 p-2">
+                <label>Property Number<span style="color:red"> * </span></label>
+                <input type="number" id="num" name="num" value="<%=property.id%>" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Title <span style="color:red"> * </span></label>
+                <input type="text" id="title" name="title" value="<%=property.title%>" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Street <span style="color:red"> * </span></label>
+                <input type="text" id="street" name="street" value="<%=property.location.street%>" class="form-control"
+                    required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>City <span style="color:red"> * </span></label>
+                <input type="text" id="city" name="city" value="<%=property.location.city%>" class="form-control"
+                    required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>State <span style="color:red"> * </span></label>
+                <input type="text" id="state" name="state" value="<%=property.location.state%>" class="form-control"
+                    required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Country <span style="color:red"> * </span></label>
+                <input type="text" id="country" name="country" value="<%=property.location.country%>"
+                    class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Zip code <span style="color:red"> * </span></label>
+                <input type="text" id="zipcode" name="zipcode" value="<%=property.location.zipcode%>"
+                    placeholder="12345" pattern="[0-9]{5}" class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Capacity <span style="color:red"> * </span></label>
+                <input type="number" min="1" step="1" id="capacity" name="capacity" value="<%=property.capacity%>"
+                    class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Property type<span style="color:red"> * </span></label>
+                <input type="text" id="property_type" name="property_type" value="<%=property.property_type%>"
+                    class="form-control" required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Price per night <span style="color:red"> * </span></label>
+                <input type="text" id="price" name="price" value="<%=property.nightly_fee%>" class="form-control"
+                    required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Cleaning Fee</label>
+                <input type="text" id="cleaning" name="cleaning" value="<%=property.cleaning_fee%>"
+                    class="form-control">
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Service Fee</label>
+                <input type="text" id="service" name="service" value="<%=property.service_fee%>" class="form-control">
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Number of bedrooms <span style="color:red"> * </span></label>
+                <input type="number" id="bedrooms" name="bedrooms" value="<%=property.bedrooms%>" class="form-control"
+                    required>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Number of beds</label>
+                <input type="number" id="beds" name="beds" value="<%=property.beds%>" class="form-control">
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label for="amenities">Amenities <span style="color:red"> * </span></label><br>
+                <select id="amenities" name="amenities" class="amenity-select" size="7" multiple required
+                    style="width:100%;border-color:lightgray;border-radius:4px;padding:4px;">
+                    <% amenities_list=["Free wifi","Free parking on premises","Garden view","Patio or balcony","TV","Swimming Pool","Kitchen"]%>
+                    <% for(var i=0; i < amenities_list.length; i++) { %>
+                        <% if(property.amenities.includes(amenities_list[i])){ %>
+                                <option value="<%= amenities_list[i] %>" selected>
+                                    <%=amenities_list[i]%>
+                                </option>
+                                <% } else{ %>
+                                    <option value="<%= amenities_list[i] %>">
+                                        <%=amenities_list[i]%>
+                                    </option>
+                                    <% } %>
+                                        <% } %>
+                    
+                </select><br><br>
+                <p style="font-size:13px;">Hold down the Ctrl (windows) / Command (Mac) button to select multiple
+                    options.</p>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label>Host name <span style="color:red"> * </span></label>
+                <input type="text" id="host" name="host" value="<%=property.host%>" class="form-control" required>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label>Short Description</label>
+                <textarea id="desc" name="desc" value="" class="form-control"><%=property.description%></textarea>
+            </div>
+            <div class="form-group col-md-5 p-2">
+                <label>Full Description</label>
+                <textarea id="fulldesc" name="fulldesc" value="" class="form-control" style="height:150px;"><%=property.full_description%></textarea>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label>House Rules</label>
+                <textarea id="house_rules" name="house_rules" value="<%=property.house_rules%>" class="form-control"><%=property.house_rules%></textarea>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <label>Cancellation policy</label>
+                <textarea id="cancellation_policy" name="cancellation_policy" value="<%=property.cancellation_policy%>"
+                    class="form-control"><%=property.cancellation_policy%></textarea>
+            </div>
+
+            <div class="form-group col-md-5 p-2">
+                <div class=" thumbnail">
+                    Main Image<br>
+                    <img src="<%=property.photo%>" style="object-fit:cover; width:100%; height:220px;" /><br><br>
+
+                    <label for="new_main_image" style="font-size: 15px">Replace main image</label>
+                    <input type="checkbox" id="new_main_image" onclick="browseButton()" name="new_main_image">
+                    <div class="form-group col-md-5 p-2">
+                        <input type="file" id="image" name="image" accept="image/png, image/jpg, image/jpeg"  style="display: none;">
+                    </div>
+                    <script>
+                        function browseButton() {
+                            var checkbox = document.getElementById("new_main_image");
+                            var button = document.getElementById("image");
+
+                            if (checkbox.checked == true) {
+                                button.style.display = "block";
+                            } else {
+                                button.style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="form-group col-md-5 p-2" style="display:none;">
+                <input type="text" id="old_photos" name="old_photos" class="form-control"
+                    value="<%= property.all_photos %>">
+            </div>
+
+            <div class="form-group col-md-5 p-2" style="display:none;">
+                <input type="text" id="old_image" name="old_image" class="form-control" value="<%= property.photo %>">
+            </div>
+            
+            <div class="form-group col-md-5 p-2">
+                <label>Add more photos</label>
+                <input type="file" accept="image/png, image/jpg, image/jpeg" id="all_photos" name="all_photos" class="form-control"
+                    multiple>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Available Dates</label>
+                
+                <div class="row text-center col-md-5 p-2"
+                     style="display:flex; flex-wrap:wrap; justify-content:center;">
+                    <%	var i = 0; property.availability.forEach(function(dates){ %>
+                    <div style="padding: 10px;">
+                        <input class="form-control" type="date"
+                                name="availability[from_<%= i %>]"
+                                id="avail_from" value="<%=new Date(dates.from).toISOString().split('T')[0]%>" onchange='check1()' onkeyup="check1()">
+                        <input class="form-control" type="date" 
+                                name="availability[to_<%= i %>]"
+                                id="avail_to" value="<%=new Date(dates.to).toISOString().split('T')[0]%>" onchange='check1()' onkeyup="check1()">
+                    </div>
+                    <% i += 1; }); %>
+                </div>
+
+                <div class="col-md-5 p-2">
+                <label for="more_dates">Add more dates</label>
+                <input type="checkbox" id="more_dates" onclick="browseDateInputs()"
+                        name="more_dates" onchange="check()">
+                <br><label for="more_dates_from" id="label_from"
+                           style="display:none;">Available from</label>
+                <input class="form-control" type="date" name="more_dates_from"
+                        id="more_dates_from" style="display:none;" onchange='check()' onkeyup="check()"><br>
+                <label for="more_dates_to" id="label_to"
+                       style="display:none;">Available to</label>
+                <input class="form-control" type="date" name="more_dates_to"
+                        id="more_dates_to" style="display:none;" onchange='check()' onkeyup="check()"><br>
+                </div>
+                
+                <span id='message1' style="color:red">Dates are not valid please change the dates</span>
+                                <br>
+
+                <script>
+                    function browseDateInputs(){
+                        var	checkbox = document.getElementById("more_dates");
+                        var label_from = document.getElementById("label_from");
+                        var input_from = document.getElementById("more_dates_from");
+                        var label_to = document.getElementById("label_to");
+                        var input_to = document.getElementById("more_dates_to");
+
+                        if(checkbox.checked == true){
+                            label_from.style.display = "block";
+                            input_from.style.display = "block";
+                            label_to.style.display = "block";
+                            input_to.style.display = "block";
+                        }else{
+                            label_from.style.display = "none";
+                            input_from.style.display = "none";
+                            label_to.style.display = "none";
+                            input_to.style.display = "none";
+                        }
+                    }
+                    
+            
+                    var today = new Date();
+                    var dd = String(today.getDate()).padStart(2, '0');
+                    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                    var yyyy = today.getFullYear();
+                    today = yyyy + '-' + mm + '-' + dd;
+                   
+                    
+                    var check = function () {
+                        var date1 = document.getElementById("more_dates_from");
+                        var date2 = document.getElementById("more_dates_to");
+                        
+                        if (document.getElementById("more_dates").checked){
+                        document.getElementById("add").disabled = true;
+                        if(date1.value.valueOf() < today.valueOf() ||   date2.value.valueOf() < today.valueOf() || date1.value.valueOf() > date2.value.valueOf()){
+                            document.getElementById('message1').style.display = "block"
+                        }
+                        else{
+                            document.getElementById('message1').style.display = "none"
+                            document.getElementById("add").disabled = false;
+                        }
+                    }
+
+                    else{
+                        document.getElementById("add").disabled = false;
+                        document.getElementById('message1').style.display = "none"
+                    }
+                        
+                    }
+
+
+                    var check1 = function () {
+                        var i = 0; 
+                        property.availability.forEach(function(dates){
+                            var date1 = document.getElementById("avail_from");
+                            var date2 = document.getElementById("avail_from");
+                            document.getElementById("add").disabled = true;
+                            if(date1.value.valueOf() < today.valueOf() ||   date2.value.valueOf() < today.valueOf() || date1.value.valueOf() > date2.value.valueOf()){
+                                document.getElementById('message1').style.display = "block"
+                            }
+                            else{
+                                document.getElementById('message1').style.display = "none"
+                                document.getElementById("add").disabled = false;
+                            }
+                     
+                        
+                        i += 1;
+                        });
+                        
+                    }
+
+                </script>
+            </div>
+
+
+            <br>
+            <div class="form-group col-md-5 p-2">
+                <button type="submit" id="add" class="btn btn-primary btn-lg">Save Changes</button>
+            </div>
+
+        </form>
+
+    
+    </div>
+
+
+    <%- include('partials/footer') %>
