@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "6395738d09fb5e177cdedb27"
+  },
+  "user_id": "6394148a746cab8544a35021",
+  "short_description": "I am a Texas native. I am passionate about food, travel and seeking the \"road less traveled\". I am in a constant state of adventure planning, a bit of a coffee snob and happiest in the great outdoors!",
+  "languages_known": "English, Spanish",
+  "co_hosts": "",
+  "is_superhost": false,
+  "start_date_as_host": {
+    "$date": {
+      "$numberLong": "1670738829936"
+    }
+  },
+  "response_rate": "100%",
+  "response_time": "within an hour",
+  "properties": [
+    {
+      "$oid": "6390d4ec746cab8544a34f46"
+    }
+  ],
+  "languages_know": null
+},{
+  "_id": {
+    "$oid": "6396231f1d30bf2536195582"
+  },
+  "user_id": "639622221d30bf253619557f",
+  "short_description": "JFJSH",
+  "languages_known": "English",
+  "co_hosts": "",
+  "is_superhost": false,
+  "start_date_as_host": {
+    "$date": {
+      "$numberLong": "1670783775308"
+    }
+  },
+  "response_rate": "100%",
+  "response_time": "within an hour",
+  "properties": [
+    {
+      "$oid": "639623601d30bf2536195583"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6396718deb1348377f9a2c22"
+  },
+  "user_id": "639670caeb1348377f9a2c1e",
+  "short_description": "I am an entrepreneur and travel is one of life's greatest gifts. Not only do I love traveling the world, but I also enjoy sharing our properties in the USA with others as well.\r\n",
+  "languages_known": "English",
+  "co_hosts": "",
+  "is_superhost": false,
+  "start_date_as_host": {
+    "$date": {
+      "$numberLong": "1670803853407"
+    }
+  },
+  "response_rate": "100%",
+  "response_time": "within an hour",
+  "properties": [
+    {
+      "$oid": "63967202eb1348377f9a2c23"
+    }
+  ]
+}]
